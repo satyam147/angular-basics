@@ -1,2 +1,6 @@
-<h3 *ngFor="let user of users">User: {{ user.name }} and email: {{ user.email }} <a class="mx-2" [routerLink]="['user',user.id]">View User</a> <a class="mx-2" [routerLink]="['user','edit',user.id]">Edit
-  User</a> <button (click)="deleteUser(user.id,user.name)" class="mx-2">Delete</button></h3>
+<h3 *ngFor="let user of users">
+  User: {{ user.name }} and email: {{ user.email }}
+  <a class="mx-2" [routerLink]="['user',user.id]">View User</a>
+  <a class="mx-2" [routerLink]="['user','edit',user.id]">Edit User</a>
+  <button (click)="deleteUser(user.id,user.name)" class="mx-2">Delete</button>
+</h3>

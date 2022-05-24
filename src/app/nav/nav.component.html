@@ -1,0 +1,18 @@
+<ul class="nav nav-pills flex-column">
+  <li class="nav-item" *ngIf="!isUserLoggedIn">
+    <a routerLink="/auth" class="nav-link" routerLinkActive="active"
+       [routerLinkActiveOptions]="{exact:true}">Login</a>
+  </li>
+  <li class="nav-item" *ngIf="isUserLoggedIn">
+    <a href="#" (click)="logout($event)" class="nav-link">Logout</a>
+  </li>
+  <div *ngIf="isUserLoggedIn">
+    <li class="nav-item">
+      <a routerLink="/" class="nav-link" routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/user/create" class="nav-link" routerLinkActive="active">Create User</a>
+    </li>
+  </div>
+</ul>

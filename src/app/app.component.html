@@ -1,15 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a routerLink="/" class="nav-link" routerLinkActive="active"
-             [routerLinkActiveOptions]="{exact:true}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/user/create" class="nav-link" routerLinkActive="active">Create User</a>
-        </li>
-      </ul>
+      <app-nav></app-nav>
     </div>
     <div class="col-md-9">
       <router-outlet></router-outlet>

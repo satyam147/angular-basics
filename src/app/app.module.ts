@@ -7,8 +7,10 @@ import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { UsersComponent } from './user/users/users.component';
 import { CreateUserComponent } from './user/create-user/create-user.component';
 import { ViewUserComponent } from './user/view-user/view-user.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { AuthComponent } from './auth/auth.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     EditUserComponent,
     UsersComponent,
     CreateUserComponent,
-    ViewUserComponent
+    ViewUserComponent,
+    AuthComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
