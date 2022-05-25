@@ -10,6 +10,7 @@ export class UsersComponent implements OnInit {
   users: any[]= [];
   constructor(private http: HttpClient) {
     this.getUsers();
+
   }
 
   ngOnInit(): void {

@@ -26,11 +26,13 @@ export class AuthComponent implements OnInit {
             email: string,
             id: string,
             name: string,
+            token: string,
           }
           let user = new UserModel();
           user.email = response.email;
           user.id = response.id;
           user.name = response.name;
+          user.token = response.token;
           this.authService.userSubject.next(user);
           localStorage.setItem('user',JSON.stringify(user));
           this.router.navigate(['/'])

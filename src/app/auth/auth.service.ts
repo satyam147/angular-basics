@@ -33,6 +33,7 @@ export class AuthService {
       authUser.email = user_json.email;
       authUser.id = user_json.id;
       authUser.name = user_json.name;
+      authUser.token = user_json.token;
       this.userSubject.next(authUser);
     }
   }
